@@ -36,8 +36,8 @@ public class CountryController {
     }
 
 //    search countries with code or name
-    @GetMapping("countries/search")
-    private List<Country> getCountriesByName(String country) {
+    @GetMapping ("countries/search")
+    private List<Country> getCountriesByName(@RequestParam String country) {
         return cs.getCountriesByName(country);
         // return countryCode + " " + countryName;
     }
